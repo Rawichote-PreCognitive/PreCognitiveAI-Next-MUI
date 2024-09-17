@@ -1,165 +1,152 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+/* page.module.css */
+/* Add any page-specific styles here */
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+.nav {
+  background-color: rgb(0, 0, 0);
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+.nav .logo-img {
+  height: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 15px;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+.dropdownContent {
+  margin-top: 20 !important;
+  background-color: black;
+  border: 1px solid #d24f0e;
+  min-width: 200px;
+  transform: translateY(-60px);
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+.dropdownContent li > a {
+  font-size: 13px;
+  color: #23d149;
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
+.dropdownContent li > a:hover {
+  background-color: #d24f0e;
+  color: white;
 }
 
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
+.sidenav {
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  background-color: rgb(0, 0, 0);
+  border-color: #fff;
+  border-left-color: #fff;
+  border-left-width: 1px;
+  border-left-style: solid;
 }
 
-.ctas {
-  display: flex;
-  gap: 16px;
+.sidenav li>a, .sidenav .user-view {
+  font-size: large !important;
+  color: white !important;
 }
 
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+.inputField input[type="text"],
+.inputField input[type="password"],
+.inputField input[type="email"],
+.inputField input[type="url"],
+.inputField input[type="time"],
+.inputField input[type="date"],
+.inputField input[type="datetime-local"],
+.inputField input[type="month"],
+.inputField input[type="week"],
+.inputField input[type="number"],
+.inputField input[type="search"],
+.inputField textarea {
+  color: grey;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.parallaxHeight {
+  height: 250px;
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
+/* Markdown Content Styles */
+.markdownContent {
+  font-family: "Comfortaa", cursive;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  line-height: 1.5;
+  padding: 0 2rem;
+  font-size: 1.05rem;
+  font-weight: 400;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
+.markdownContent h1 {
+  color: rgb(4, 249, 8);
+  font-weight: bold !important;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.markdownContent h2 {
+  color: rgb(4, 249, 8);
+  font-weight: bold !important;
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.footer img {
-  flex-shrink: 0;
+.markdownContent h3 {
+  color: rgb(4, 249, 8);
+  font-weight: bold !important;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+.markdownContent p {
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+.markdownContent strong {
+  font-weight: bold !important;
+  color: rgb(4, 249, 8);
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.markdownContent a {
+  color: #63acff; /* VS Code Blue */
+  text-decoration: none; /* Remove underline */
+}
+
+.markdownContent ul {
+  list-style: disc;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.markdownContent ol {
+  list-style: decimal;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.markdownContent li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.markdownContent code {
+  font-family: monospace;
+  background-color: #333;
+  color: #fff;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.markdownContent pre {
+  font-family: monospace;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+  border-radius: 3px;
+  overflow: auto;
 }
