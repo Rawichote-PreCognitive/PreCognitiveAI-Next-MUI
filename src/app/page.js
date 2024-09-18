@@ -1,35 +1,21 @@
-import { Container, Box, Typography } from '@mui/material';
+// src/app/page.js
+import React from 'react';
+import {Box } from '@mui/material';
 import GPTChainSection from './GPTChainSection.js';
 import GenerativeAIServices from './GeneralAIServices.js';
+import Navbar from './Navbar.js';
+import footer from './footer.js';
 
 export default function Home() {
-
   return (
     <>
-      {/* Parallax Container */}
-      <Box
-        sx={{
-          backgroundImage: `url(/background/bg01.png)`, // Path to your image in the public folder
-          backgroundSize: 'cover', // Adjust as needed
-          backgroundRepeat: 'repeat', // Allow the background image to repeat
-          backgroundAttachment: 'fixed', // Implement parallax effect
-          height: '50vh', // Adjust height as needed
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <Navbar />
+
+      <Box sx={{ overflow: 'visible' }}>  {/* Ensure normal scrolling behavior */}
+        {GPTChainSection}
+        {GenerativeAIServices}
+        {footer}
       </Box>
-
-      {/* GPTChain Section */}
-      {GPTChainSection}
-
-
-      {/* Generative AI Service Section */}
-      {GenerativeAIServices}
-      
-
-      
     </>
   );
 }
