@@ -4,26 +4,19 @@ import { Container, Box } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import styles from './page.module.css'; // Import the CSS module
+import ParallaxBackground from './ParallaxBackground';
 
-// This component renders a Markdown content with parallax effect
-const MarkdownContent = ({ id, content, imgSrc, imgAlt }) => {
+// Usage
+
+// MarkdownContent may have to accept key prop in the case of mapping through an array of MarkdownContent components.
+// The key prop is used by React to identify which items have changed, are added, or are removed.
+const MarkdownContent = ({ id, content, imgSrc, imgAlt, key }) => {
   return (
     <>
-      <Box // Parallax Effect
-        sx={{
-          backgroundImage: `url(/background/bg01.png)`, // Path to your image in the public folder
-          backgroundSize: 'cover', // Adjust as needed
-          backgroundRepeat: 'repeat', // Allow the background image to repeat
-          backgroundAttachment: 'fixed', // Implement parallax effect
-          height: '20vh', // Vertical space for the parallax effect
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-      </Box>
+      {/* <ParallaxBackground height="20vh" /> */}
       <Box
         id={id}
+        key={key}
         sx={{
           backgroundColor: 'black',
           color: 'white',
@@ -49,19 +42,6 @@ const MarkdownContent = ({ id, content, imgSrc, imgAlt }) => {
             </Box>
           </Box>
         </Container>
-      </Box>
-      <Box // Parallax Effect
-        sx={{
-          backgroundImage: `url(/background/bg01.png)`, // Path to your image in the public folder
-          backgroundSize: 'cover', // Adjust as needed
-          backgroundRepeat: 'repeat', // Allow the background image to repeat
-          backgroundAttachment: 'fixed', // Implement parallax effect
-          height: '20vh', // Vertical space for the parallax effect
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
       </Box>
     </>
   );

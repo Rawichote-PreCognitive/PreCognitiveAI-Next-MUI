@@ -1,4 +1,5 @@
-import React from 'react';
+
+// src/app/Navbar.js
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import Image from 'next/image';
 

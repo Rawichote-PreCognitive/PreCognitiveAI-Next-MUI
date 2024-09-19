@@ -1,5 +1,7 @@
+// src/app/layout.js
 import './globals.css';
-import { Comfortaa } from '@next/font/google';
+// import { Comfortaa } from '@next/font/google';
+import { Comfortaa } from 'next/font/google';
 
 /* Import Comfortaa with specific weights */
 const comfortaa = Comfortaa({
