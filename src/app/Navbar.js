@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AppBar, Toolbar, Typography, Box, IconButton, Button, Container, Drawer, List, ListItem, ListItemText, ListItemButton, Menu, MenuItem, Collapse } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, IconButton, Button, Container, Drawer, List, ListItem, ListItemText, Menu, MenuItem, Collapse } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
@@ -60,19 +60,15 @@ const Navbar = ({ content }) => {
 
   const renderDrawerItems = (menu, open, handleToggle) => (
     <React.Fragment key={menu}>
-      <ListItem disablePadding>
-        <ListItemButton onClick={handleToggle}>
-          <ListItemText primary={menu} />
-          {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItemButton>
+      <ListItem button="true" onClick={handleToggle}> 
+        <ListItemText primary={menu} />
+        {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           {groupedContent[menu] && groupedContent[menu].map((item) => (
-            <ListItem disablePadding key={item.section}>
-              <ListItemButton onClick={(e) => smoothScroll(e, item.section)}>
-                <ListItemText primary={item.section.replace(/\\&/g, '&').replace(/_/g, ' ')} />
-              </ListItemButton>
+            <ListItem button="true" key={item.section} onClick={(e) => smoothScroll(e, item.section)}> 
+              <ListItemText primary={item.section.replace(/\\&/g, '&').replace(/_/g, ' ')} />
             </ListItem>
           ))}
         </List>
