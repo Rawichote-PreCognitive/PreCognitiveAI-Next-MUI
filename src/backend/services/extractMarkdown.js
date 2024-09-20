@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const markdownFilePath = path.join(process.cwd(), '../contents/mainPage.md');
+const markdownFilePath = path.join(process.cwd(), 'src/backend/contents/mainPage.md');
 
 const extractSectionsFromMarkdown = (markdownContent) => {
   const sections = [];

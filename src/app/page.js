@@ -5,8 +5,8 @@ import React, { useState, useEffect } from 'react';
 import { Box } from '@mui/material';
 import Navbar from './Navbar.js';
 import footer from './footer.js';
-import ParallaxBackground from './ParallaxBackground.js';
-import MarkdownContent from './MarkdownContent.js';
+import ParallaxBackground from './ParallaxBackground';
+import MarkdownContent from './MarkdownContent';
 
 export default function Home() {
   const [content, setContent] = useState([]);
@@ -21,7 +21,7 @@ export default function Home() {
           console.error('API endpoint not found (404)');
           return;
         }
-  
+
         const { success, data, error } = await response.json();
         
         if (success && data.length > 0) {
@@ -29,13 +29,15 @@ export default function Home() {
           console.log(`Fetched ${data.length} sections`);
           console.log(data);
           const markdownContent = data.map((content, index) => (
-            <MarkdownContent
-              key={index}
-              id={content.section}
-              content={content.content}
-              imgSrc={content.image}
-              imgAlt={content.alt}
-            />
+            <React.Fragment key={index}>
+              <MarkdownContent
+                id={content.section}
+                content={content.content}
+                imgSrc={content.image}
+                imgAlt={content.alt}
+              />
+              <ParallaxBackground height="20vh" />
+            </React.Fragment>
           ));
           setSections(markdownContent);
         } else {
@@ -57,6 +59,7 @@ export default function Home() {
       <ParallaxBackground height="20vh" />
       <Box sx={{ overflow: 'visible' }}>  {/* Ensure normal scrolling behavior */}
         {sections.length > 0 && sections}
+        <ParallaxBackground height="20vh" />
         {footer}
       </Box>
     </>

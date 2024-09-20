@@ -10,13 +10,12 @@ import ParallaxBackground from './ParallaxBackground';
 
 // MarkdownContent may have to accept key prop in the case of mapping through an array of MarkdownContent components.
 // The key prop is used by React to identify which items have changed, are added, or are removed.
-const MarkdownContent = ({ id, content, imgSrc, imgAlt, key }) => {
+const MarkdownContent = ({ id, content, imgSrc, imgAlt }) => {
   return (
     <>
       {/* <ParallaxBackground height="20vh" /> */}
       <Box
         id={id}
-        key={key}
         sx={{
           backgroundColor: 'black',
           color: 'white',
