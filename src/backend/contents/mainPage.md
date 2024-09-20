@@ -1,5 +1,5 @@
 ## GPTChain
-<!-- product -->
+<!-- Products -->
 
 ![GPTChain](/images/img01_GPTFlow.png)
 
@@ -8,7 +8,7 @@ Starting next month, accelerate your large language model (LLM) application deve
 Open to everyone at no cost, GPTChain allows users to explore, create, and test their LLM apps. For subscribed users, deployment is made easy on the GPTChain platform. Simply copy the provided JavaScript code snippet and paste it into your main app to implement your LLM application seamlessly. Discover the future of generative AI application development with GPTChain.
 
 ## Generative AI Services
-<!-- service -->
+<!-- Services -->
 
 **GPTChain:** We offer consulting and implementation services for GPTChain that include:
 
@@ -37,14 +37,14 @@ applications, providing users with smart suggestions, assistance, and guidance. 
 models, we enable enhanced user experiences and increased efficiency within the app workflow.
 
 ## ClipTakr
-<!-- product -->
+<!-- Products -->
 
 ![GPTChain](/images/img02_ClipTakr.png)
 
 Coming soon in Q4 this year, ClipTakr revolutionizes text-to-speech conversions. With 829 natural-sounding AI-generated voices in 142 languages and accents, powered by cutting-edge generative AI technology, it offers an unparalleled audio experience. Designed for content creators, ClipTakr enhances accessibility and engagement by transforming written content into high-quality audio. Expand your reach in international markets, including English-speaking countries   and Chinese-speaking countries . With customizable features, including a custom voice cloning service, and a wide range of voices that include Thai voice characters and support for Thai text-to-speech SSML, ClipTakr caters specifically to the Thai  market. Elevate your content with ClipTakr's state-of-the-art platform.
 
 ## AI Search \& Recommendations
-<!-- product -->
+<!-- Products -->
 
 ![GPTChain](/images/img05_Recommendation.png )
 
@@ -53,7 +53,7 @@ Elevate your customer experience with our AI Recommendation system. Personalize 
 Enhance search precision and user satisfaction with our AI Search solution. Leveraging advanced semantic understanding, it delivers highly relevant search results. Improve product discovery and conversion rates by providing customers with an intuitive and effortless search experience. Upgrade your website with AI Search for better user engagement.
 
 ## E-Commerce AI Services
-<!-- service -->
+<!-- Services -->
 
 **Consult and Implement Google Retail API:** We provide consulting and implementation services for the Google
 Retail API, integrating Recommendations AI and Retail Search capabilities. This option offers quick

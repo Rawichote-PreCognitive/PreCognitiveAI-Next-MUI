@@ -4,7 +4,9 @@
     "target": "ES6",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/services/*": ["src/backend/services/*"],
+      "@/components/*": ["src/components/*"],
+      "@/context/*": ["context/*"],
     }
   }
 }

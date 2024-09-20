@@ -8,8 +8,16 @@ import footer from './footer.js';
 import ParallaxBackground from './ParallaxBackground';
 import MarkdownContent from './MarkdownContent';
 
+
 export default function Home() {
+  // JSON array of content sections: 
+  // [{ section: string, content: string, image: string, alt: string, menu: string }]
+  // menu can be: Products, Services, Success Stories, About Us
+  // The menu field is used for adding the section to the associated menu on the Navbar
   const [content, setContent] = useState([]);
+  // Array of React components for each content section, which comprise of
+  // - Rendered MarkdownContent components
+  // - ParallaxBackground components
   const [sections, setSections] = useState([]);
 
   useEffect(() => {
@@ -28,6 +36,7 @@ export default function Home() {
           setContent(data);
           console.log(`Fetched ${data.length} sections`);
           console.log(data);
+          // Generate React components for each content section
           const markdownContent = data.map((content, index) => (
             <React.Fragment key={index}>
               <MarkdownContent
@@ -36,7 +45,7 @@ export default function Home() {
                 imgSrc={content.image}
                 imgAlt={content.alt}
               />
-              <ParallaxBackground height="20vh" />
+              <ParallaxBackground height="30vh" />
             </React.Fragment>
           ));
           setSections(markdownContent);
@@ -55,11 +64,10 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar content={content} />
       <ParallaxBackground height="20vh" />
-      <Box sx={{ overflow: 'visible' }}>  {/* Ensure normal scrolling behavior */}
+      <Box sx={{ overflow: 'visible' }}>
         {sections.length > 0 && sections}
-        <ParallaxBackground height="20vh" />
         {footer}
       </Box>
     </>

@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const markdownFilePath = path.join(process.cwd(), 'src/backend/contents/mainPage.md');
+console.log(`Current working directory: ${process.cwd()}`);
 
 const extractSectionsFromMarkdown = (markdownContent) => {
   const sections = [];
@@ -28,11 +29,11 @@ const extractSectionsFromMarkdown = (markdownContent) => {
     sectionContent = sectionContent.replace(contentTypePattern, '');
 
     sections.push({
-      section: sectionTitle.replace(/\s+/g, '-'), // Convert spaces to hyphens
+      section: sectionTitle.replace(/\s+/g, '_'), // Convert spaces to hyphens
       content: sectionContent.trim(),
       image: imageUrl,
       alt: imageAlt,
-      contentType: contentTypeMatch ? contentTypeMatch[1] : 'default',
+      menu: contentTypeMatch ? contentTypeMatch[1] : 'default',
     });
   }
 
@@ -52,6 +53,10 @@ const getContentSections = () => {
   }
 };
 
+// const result = getContentSections();
+// console.log(JSON.stringify(result, null, 2));
+
+
 export default getContentSections;
 
-// console.log(JSON.stringify(result, null, 2));
+
