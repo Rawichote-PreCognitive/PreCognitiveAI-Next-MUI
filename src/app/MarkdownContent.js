@@ -6,14 +6,14 @@ import Image from 'next/image';
 import styles from './page.module.css'; // Import the CSS module
 
 const MarkdownContent = ({ id, content, imgSrc, imgAlt }) => {
-  
+
   const mainStyle = {
     backgroundColor: 'black', color: 'white', padding: 4, fontFamily: 'Comfortaa, sans-serif'
   };
 
   return (
     <>
-      <Box id={id} sx={mainStyle} >
+      <Box id={id} sx={mainStyle}>
         <Container>
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
             {imgSrc && (
@@ -27,7 +27,7 @@ const MarkdownContent = ({ id, content, imgSrc, imgAlt }) => {
                 />
               </Box>
             )}
-            <Box className={styles.markdownContent} sx={{ flex: 1 }}>
+            <Box className={styles.markdownContent} sx={{flex: 1}}>
               <ReactMarkdown>{content}</ReactMarkdown>
             </Box>
           </Box>

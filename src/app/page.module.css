@@ -1,7 +1,6 @@
 /* page.module.css */
 /* Add any page-specific styles here */
 
-
 .inputField input[type="text"],
 .inputField input[type="password"],
 .inputField input[type="email"],
@@ -20,16 +19,22 @@
 /* Markdown Content Styles */
 .markdownContent {
   font-family: "Comfortaa", cursive;
-  color: white;
-  background-color: rgb(0, 0, 0);
+  color: #ffffff; /* white */
+  background-color: #000000; /* black */
   line-height: 1.5;
   padding: 0 2rem;
-  font-size: 1.05rem;
+  font-size: 1.05rem !important; /* Ensure this is overridden */
   font-weight: 400;
 }
 
+@media (max-width: 600px) {
+  .markdownContent {
+    font-size: 0.875rem !important; /* Smaller font size for small screens */
+  }
+}
+
 .markdownContent h1 {
-  color: rgb(4, 249, 8);
+  color: #04f908; /* neon green */
   font-weight: bold !important;
   font-size: 2em;
   margin-top: 1em;
@@ -37,7 +42,7 @@
 }
 
 .markdownContent h2 {
-  color: rgb(4, 249, 8);
+  color: #04f908; /* neon green */
   font-weight: bold !important;
   font-size: 1.5em;
   margin-top: 1em;
@@ -45,7 +50,7 @@
 }
 
 .markdownContent h3 {
-  color: rgb(4, 249, 8);
+  color: #04f908; /* neon green */
   font-weight: bold !important;
   font-size: 1.17em;
   margin-top: 1em;
@@ -59,7 +64,7 @@
 
 .markdownContent strong {
   font-weight: bold !important;
-  color: rgb(4, 249, 8);
+  color: #04f908; /* neon green */
 }
 
 .markdownContent a {
@@ -88,16 +93,16 @@
 
 .markdownContent code {
   font-family: monospace;
-  background-color: #333;
-  color: #fff;
+  background-color: #333333; /* dark grey */
+  color: #ffffff; /* white */
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
 
 .markdownContent pre {
   font-family: monospace;
-  background-color: #333;
-  color: #fff;
+  background-color: #333333; /* dark grey */
+  color: #ffffff; /* white */
   padding: 0.5em;
   border-radius: 3px;
   overflow: auto;
