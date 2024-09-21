@@ -59,6 +59,7 @@ const Navbar = ({ content }) => {
           handleCloseMenu(menu)();
         }}
         sx={{
+          fontFamily: 'Comfortaa, sans-serif',
           backgroundColor: 'black',
           color: '#23d149',
           '&:hover': {
@@ -93,7 +94,7 @@ const Navbar = ({ content }) => {
             primaryTypographyProps={{
               sx: {
                 color: '#23d149',
-                fontSize: '15px',
+                fontSize: '16px',
                 fontFamily: 'Comfortaa, sans-serif',
                 fontWeight: 700,
               },
