@@ -1,6 +1,5 @@
 // src/app/layout.js
 import './globals.css';
-// import { Comfortaa } from '@next/font/google';
 import { Comfortaa } from 'next/font/google';
 
 /* Import Comfortaa with specific weights */
@@ -17,7 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* Apply the Comfortaa font globally */}
+      <head>
+        <link rel="icon" href="/logos/logo_only.png" />
+      </head>
       <body className={comfortaa.className}>
         {children}
       </body>
